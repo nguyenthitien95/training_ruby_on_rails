@@ -1,0 +1,2 @@
+rails generate integration_test site_layout
+rails test:integration
