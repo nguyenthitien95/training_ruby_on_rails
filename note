@@ -1,0 +1,31 @@
+rails generate integration_test site_layout
+rails test:integration
+
+
+user.save
+user.first
+user.new
+user.all
+user.find
+user.find_by
+user.reload.email
+user.update_attributes
+user.valid? + user.errors.full_messages
+user.password_digest
+user.authenticate("not_the_right_password")
+
+
+
+
+/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i	full regex
+/	start of regex
+\A	match start of a string
+[\w+\-.]+	at least one word character, plus, hyphen, or dot
+@	literal “at sign”
+[a-z\d\-.]+	at least one letter, digit, hyphen, or dot
+\.	literal dot
+[a-z]+	at least one letter
+\z	match end of a string
+/	end of regex
+i	case-insensitive
+rails generate migration add_password_digest_to_users password_digest:string
