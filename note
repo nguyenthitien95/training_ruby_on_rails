@@ -21,6 +21,10 @@ user.valid? + user.errors.full_messages
 user.password_digest
 user.authenticate("not_the_right_password")
 SecureRandom.urlsafe_base64
+>> User.new.new_record?
+=> true
+>> User.first.new_record?
+=> false
 
 
 
