@@ -1,5 +1,10 @@
 rails generate integration_test site_layout
 rails test:integration
+rails generate controller Sessions new
+rails generate integration_test users_login
+
+redirect_to user
+user_url(user)
 
 
 user.save
