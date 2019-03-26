@@ -4,6 +4,11 @@ rails generate controller Sessions new
 rails generate integration_test users_login
 rails generate migration add_remember_digest_to_users remember_digest:string
 rails generate migration add_admin_to_users admin:boolean
+rails generate controller AccountActivations
+rails generate migration add_activation_to_users
+rails generate mailer UserMailer account_activation password_reset
+
+
 
 redirect_to user
 user_url(user)
@@ -25,6 +30,7 @@ SecureRandom.urlsafe_base64
 => true
 >> User.first.new_record?
 => false
+User.first.create_activation_digest
 
 
 
@@ -41,3 +47,5 @@ SecureRandom.urlsafe_base64
 /	end of regex
 i	case-insensitive
 rails generate migration add_password_digest_to_users password_digest:string
+
+
