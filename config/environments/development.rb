@@ -32,7 +32,7 @@ Rails.application.configure do
 
   host = 'localhost' # Don't use this literally; use your local dev host instead
   # Use this on the cloud IDE.
-  config.action_mailer.default_url_options = { host: host, protocol: 'https', port: 3000 }
+  config.action_mailer.default_url_options = { host: host, protocol: 'http', port: 3000 }
   # Use this if developing on localhost.
   # config.action_mailer.default_url_options = { host: host, protocol: 'http' }
 
