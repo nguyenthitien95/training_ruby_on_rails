@@ -35,7 +35,8 @@ SecureRandom.urlsafe_base64
 User.first.create_activation_digest
 
 
-
+lsof -wni tcp:port
+kill 9 pid
 
 /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i	full regex
 /	start of regex
