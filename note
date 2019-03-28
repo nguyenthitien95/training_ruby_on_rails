@@ -7,8 +7,10 @@ rails generate migration add_admin_to_users admin:boolean
 rails generate controller AccountActivations
 rails generate migration add_activation_to_users
 rails generate mailer UserMailer account_activation password_reset
-
-
+rails generate model Micropost content:text user:references
+rails generate uploader Picture
+rails generate migration add_picture_to_microposts picture:string
+rails db:migrate
 
 redirect_to user
 user_url(user)
